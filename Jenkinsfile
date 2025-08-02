@@ -6,6 +6,10 @@ pipeline {
         echo 'Build complate successful'
       }
     }
-
+    stage('Test') {
+      steps {
+        echo 'testing complate successful'
+      }
+    }
   }
 }
