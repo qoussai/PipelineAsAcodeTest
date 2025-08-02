@@ -4,6 +4,9 @@ pipeline {
     stage('Build') {
       steps {
         echo 'Build complate successful'
+        timeout(time: 4, unit: 'SECONDS') {
+          sh 'sleep 10'
+        }
       }
     }
     stage('Test') {
@@ -11,5 +14,10 @@ pipeline {
         echo 'testing complate successful'
       }
     }
+      stage('Deploy') {
+      steps {
+        echo 'Deploy complate successful'
+      }
+    }  
   }
 }
